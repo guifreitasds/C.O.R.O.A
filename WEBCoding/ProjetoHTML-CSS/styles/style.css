@@ -16,9 +16,6 @@ header{
     height: 138px;
 }
 
-header > div{
-    position: absolute;
-}
 
 header > div > h1{
     color: #741b47;
@@ -35,24 +32,24 @@ header img{
     margin-top: 20px;
 }
 
-header > nav{
+main > nav{
+    margin-left: 0px;
     text-align: left;
-    margin-left: 100px;
     background-color:#741b47;
     width: 271px;
     padding: 10px;
 
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 0px 0px 5px 0px;
 }
 
-header > nav > a{
+main > nav > a{
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
     color: white;
 }
 
-header > nav > a:hover{
+main > nav > a:hover{
     background-color: white;
     color: #741b47;
     transition-duration: 0.5s;
@@ -64,7 +61,6 @@ main{
     background-color: white;
     margin-left: 100px;
     margin-right: 100px;
-    padding: 20px;
     box-shadow: 4px 3px 4px 0px #00000038;
 }
 
