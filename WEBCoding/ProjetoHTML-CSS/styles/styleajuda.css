@@ -2,6 +2,6 @@ main{
     text-align: left;
 }
 
-main > h1,input{
+main > section > h1,input{
     margin-left: 70px;
 }
