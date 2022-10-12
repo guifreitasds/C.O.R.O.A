@@ -22,17 +22,24 @@ header > div{
 
 
 header > div > h1{
+    position: absolute;
+    left: 45%;
+    top: 45px;
+
+    transform: translate(-20%);
     color: #741b47;
     font-weight: 500;
     font-size: 3em;
 }
 
-header img, h1{
-    display: inline-block;
+header > div > img, h1{
+    display: flexbox;
     font-weight: 800;
 }
 
-header img{
+header > div > img{
+    position: absolute;
+    right: 60%;
     width: 100px;
     margin-top: 20px;
 }
