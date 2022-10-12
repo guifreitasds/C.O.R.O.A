@@ -90,21 +90,18 @@ span.midwords{
 
 p.sub{
     font-size: 2em;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0px;
 }
 
 p.fromsub{
     font-size: 16Spx;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0px;
 }
 
 main{
     background-color: white;
-    margin-left: 100px;
+    margin: 0px 100px;
     max-width: 1500px;
-    margin-right: 100px;
     box-shadow: 4px 3px 4px 0px #00000038;
 }
 
@@ -113,7 +110,4 @@ section{
     margin-top: 50px;
 }
 
-ol{
-    margin-top: 20px;
-    margin-left: 20px;
-}
+
