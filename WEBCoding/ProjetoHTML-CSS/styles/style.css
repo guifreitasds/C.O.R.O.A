@@ -94,6 +94,12 @@ p.sub{
     margin-bottom: 30px;
 }
 
+p.fromsub{
+    font-size: 16Spx;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 main{
     background-color: white;
     margin-left: 100px;
