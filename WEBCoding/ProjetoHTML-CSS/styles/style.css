@@ -100,7 +100,7 @@ p.fromsub{
 
 main{
     background-color: white;
-    margin: 0px 100px;
+    margin: auto;
     max-width: 1500px;
     box-shadow: 4px 3px 4px 0px #00000038;
 }

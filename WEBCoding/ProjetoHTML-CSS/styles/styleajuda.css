@@ -20,7 +20,7 @@ main > section > h1,input{
 }
 
 .figureOldMan{
-    position: relative;
+    position: absolute;
     width: 221px;
     height: 300px;
     top: 0;
@@ -69,6 +69,7 @@ main > section > h1,input{
 }
 
 .links-box1 {
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     
@@ -76,4 +77,22 @@ main > section > h1,input{
 .links-box2{
     display: flex;
     justify-content: space-between;
+}
+
+.btnHelp{
+    background-color: #741b47;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+}
+
+div.btnHelp > a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.btnLink{
+    display: block;
 }
