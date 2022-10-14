@@ -105,11 +105,32 @@ main{
     box-shadow: 4px 3px 4px 0px #00000038;
 }
 
+
+div.withAside{
+    position: relative;
+}
+
 img#imgCellphone{
+
     margin-top: 50px;
-    margin-right: 50px;
-    width: 500px;
+    margin-right: 400px;
+    width: 800px;
     display: inline;
+}
+
+p#asideimg{
+    position: absolute;
+
+    font-size: 1.4em;
+
+    top: 300px;
+    right: 100px;
+
+}
+
+p#asideimg > span{
+    font-size: 0.5em;
+    font-weight: normal;
 }
 
 section{
