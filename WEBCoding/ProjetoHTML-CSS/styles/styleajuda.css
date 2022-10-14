@@ -93,6 +93,13 @@ div.btnHelp > a{
     font-weight: bold;
     color: white;
     text-decoration: none;
+    position: relative;
+
+    top: 12px;
+}
+
+div.btnHelp > a#btn4{
+    top: 2px;
 }
 
 .btnLink{
