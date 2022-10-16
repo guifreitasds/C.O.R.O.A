@@ -7,6 +7,10 @@ main > section > h1,input{
     margin-left: 70px;
 }
 
+main > section{
+    padding-bottom: 30px;
+}
+
 .container{
     position: relative;
     
