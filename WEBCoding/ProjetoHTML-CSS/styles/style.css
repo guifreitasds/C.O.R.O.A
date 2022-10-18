@@ -17,7 +17,7 @@ header{
     justify-content: center;
     text-align: center;
     background-color: #ffc9ab;
-    height: 138px;
+    height: 130px;
 }
 
 
@@ -73,6 +73,10 @@ main h1{
     font-weight: 700;
 }
 
+section{
+    margin-top: 50px;
+}
+
 span.firstletter{
     font-family: 'Noto Serif', serif;
     color: #741b47;
@@ -99,19 +103,23 @@ main{
     box-shadow: 4px 3px 4px 0px #00000038;
 }
 
-
+div.withAside{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
 
 img#imgCellphone{
 
     margin-top: 50px;
-    margin-right: 400px;
     width: 800px;
     display: inline;
 }
 
 p#asideimg{
-
+    align-self: center;
+    margin-top: 50px;
     font-size: 1.4em;
 
 
@@ -122,9 +130,6 @@ p#asideimg > span{
     font-weight: normal;
 }
 
-section{
-    margin-top: 50px;
-}
 
 footer > img{
     width: 100px;
