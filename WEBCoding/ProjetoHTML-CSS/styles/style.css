@@ -12,37 +12,31 @@ body{
 }
 
 header{
+    position: relative;
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: #ffc9ab;
     height: 138px;
 }
 
-header > div{
-    position: relative;
-}
 
 
-header > div > h1{
-    position: absolute;
-    left: 45%;
-    top: 40px;
+header > h1{
+    align-self: center;
 
-    transform: translate(-20%);
     color: #741b47;
     font-family: 'Noto Serif', serif;
     font-weight: 400;
     font-size: 3em;
 }
 
-header > div > img h1{
-    display: flexbox;
-}
 
-header > div > img{
-    position: absolute;
-    right: 60%;
-    width: 100px;
-    margin-top: 20px;
+header > img{
+    align-self: center;
+
+    width: 120px;
+    padding-right: 5px;
 }
 
 main > nav{
@@ -106,9 +100,7 @@ main{
 }
 
 
-div.withAside{
-    position: relative;
-}
+
 
 img#imgCellphone{
 
@@ -119,12 +111,9 @@ img#imgCellphone{
 }
 
 p#asideimg{
-    position: absolute;
 
     font-size: 1.4em;
 
-    top: 300px;
-    right: 100px;
 
 }
 
