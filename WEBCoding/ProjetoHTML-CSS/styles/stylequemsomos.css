@@ -17,13 +17,12 @@ main > section{
 
 main > section > ul{
     width: 550px;
-    padding: 20px;
+    padding: 25px;
     color: #ffff;
     background-color: #741b47;
     text-align: left;
     font-size: 1.5em;
-    margin-top: 30px;
-    margin-left: 20px;
+    margin:auto;
     border-radius: 10px;
 }
 
