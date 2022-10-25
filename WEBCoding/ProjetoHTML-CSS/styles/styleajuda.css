@@ -3,6 +3,14 @@
 
 } */
 
+:root{
+    --primarypurple: #741b47;
+    --primarysalmon: #ffc9ab;
+    --secondarysalmon: #fff2eb;
+
+    --primaryfont: 'Noto Serif', serif;
+}
+
 main > section > h1,input{
     margin-left: 70px;
 }
@@ -82,7 +90,7 @@ main > section{
 }
 
 .btnHelp{
-    background-color: #741b47; /* Estilização dos botões de opções de ajudas */
+    background-color: var(--primarypurple); /* Estilização dos botões de opções de ajudas */
     padding: 10px;
     text-align: center;
     border-radius: 10px;

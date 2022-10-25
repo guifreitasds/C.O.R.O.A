@@ -1,3 +1,11 @@
+:root{
+    --primarypurple: #741b47;
+    --primarysalmon: #ffc9ab;
+    --secondarysalmon: #fff2eb;
+
+    --primaryfont: 'Noto Serif', serif;
+}
+
 main{
     text-align: center;
 }
@@ -19,7 +27,7 @@ main > section > ul{
     width: 550px;
     padding: 25px;
     color: #ffff;
-    background-color: #741b47;
+    background-color: var(--primarypurple);
     text-align: left;
     font-size: 1.5em;
     margin:auto;
