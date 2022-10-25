@@ -109,32 +109,6 @@ main{
     box-shadow: 4px 3px 4px 0px #00000038;
 }
 
-div.withAside{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-
-img#imgCellphone{
-
-    margin-top: 50px;
-    width: 750px;
-    display: inline;
-}
-
-p#asideimg{
-    align-self: center;
-    margin-top: 50px;
-    font-size: 1.6em;
-
-
-}
-
-p#asideimg > span{
-    font-size: 0.5em;
-    font-weight: normal;
-}
 
 footer.footerdiv{
     display: flex;

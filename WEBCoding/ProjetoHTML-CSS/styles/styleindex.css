@@ -2,3 +2,35 @@ main{
     text-align: center;
 }
 
+div.withAside{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+img#imgCellphone{
+
+    margin-top: 50px;
+    width: 750px;
+    display: inline;
+}
+
+div#asidetext{
+    align-self: center;
+    margin-top: 50px;
+}
+
+p#titlefromaside{
+    font-size: 4em;
+    padding: 5px;
+}
+
+p#subtitlefromaside{
+    font-size: 1.8em;
+    padding: 5px;
+}
+
+div#asidetext > p#textfromaside{
+    font-size: 1.2em;
+    font-weight: lighter;
+}
