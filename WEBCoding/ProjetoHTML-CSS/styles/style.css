@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    display: flex;
+    display: flex; /* Display flex, usado para alinhamento da imagem com titulo no header */
     justify-content: center;
     text-align: center;
     background-color: #ffc9ab;
