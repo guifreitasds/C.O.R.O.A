@@ -41,7 +41,7 @@ header > h1{
 header > img{
     align-self: center;
 
-    width: 100px;
+    width: 115px;
     padding-right: 5px;
 }
 
@@ -109,9 +109,35 @@ main{
     box-shadow: 4px 3px 4px 0px #00000038;
 }
 
+footer{
+    padding: 10px;
+}
 
-footer.footerdiv{
+div.footerdiv{
     display: flex;
+}
+
+div.footerdiv > p{
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+div.footerdiv > div.firstcol{
+    display: block;
+    align-self: center;
+}
+
+div.footerdiv a{
+    text-decoration: none;
+    color: black;
+}
+
+div.footerdiv a:hover{
+    text-decoration:underline;
+}
+
+a > p{
+    padding: 5px;
 }
 
 footer > div > img{
