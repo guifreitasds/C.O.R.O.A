@@ -34,3 +34,9 @@ div#asidetext > p#textfromaside{
     font-size: 1.2em;
     font-weight: lighter;
 }
+
+@media screen and (max-width: 1085px) {
+    div.withAside{
+        display: block;
+    }
+}
