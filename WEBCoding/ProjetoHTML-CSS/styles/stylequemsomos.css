@@ -1,9 +1,9 @@
 :root{
-    --primarypurple: #741b47;
-    --primarysalmon: #ffc9ab;
-    --secondarysalmon: #fff2eb;
+    --primarypurple: #741b47; /* Cor primária da página */
+    --primarysalmon: #ffc9ab; /* Cor secundária da página */
+    --secondarysalmon: #fff2eb; /* Cor terciária da página */
 
-    --primaryfont: 'Noto Serif', serif;
+    --primaryfont: 'Noto Serif', serif; /* Fonte primária */
 }
 
 main{
