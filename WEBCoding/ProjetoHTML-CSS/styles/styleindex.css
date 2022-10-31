@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 main{
     text-align: center;
 }
@@ -11,7 +13,7 @@ div.withAside{
 img#imgCellphone{
 
     margin-top: 50px;
-    width: 750px;
+    width: 100%;
     display: inline;
 }
 
@@ -35,8 +37,3 @@ div#asidetext > p#textfromaside{
     font-weight: lighter;
 }
 
-@media screen and (max-width: 1085px) {
-    div.withAside{
-        display: block;
-    }
-}
