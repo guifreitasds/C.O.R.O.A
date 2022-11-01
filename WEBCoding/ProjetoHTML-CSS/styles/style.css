@@ -45,6 +45,14 @@ header > img{
     padding-right: 5px;
 }
 
+div.icon {
+    display: none;
+}
+
+div.icon2{
+    display: none;
+}
+
 main > nav{
     margin-left: 0px;
     text-align: left;

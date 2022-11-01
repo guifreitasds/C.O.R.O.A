@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.O.R.O.A (W.I.P)</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styleindex.css">
-    <link rel="stylesheet" href="styles/mqfortablets.css">
+    <link rel="stylesheet" href="styles/mqindex.css">
 </head>
 <body>
     <header>
@@ -15,13 +16,15 @@
         <h1>C . O . R . O . A</h1>
     </header>
     <main>
-        <nav>
+        <div class="icon" id="idicon" onclick="exibirnav()"><span class="material-icons">menu</span></div>
+        <nav id="navigation">
             <a href="#">Início</a>
             <p style="display: inline;">|</p>
             <a href="quemsomos.html" target="_parent">Quem Somos?</a>
             <p style="display: inline;">|</p>
             <a href="ajuda.html" target="_parent" class="last">Ajuda</a>
         </nav>
+        <div class="icon2" id="idicon2" onclick="fecharnav()"><span class="material-icons" id="iconclose">close</span></div>
         <section>
             <h1>
                 <span class="firstletter">C</span>uidado, <span class="firstletter">O</span>rientação,
@@ -66,5 +69,25 @@
            &copy; 2022 C.O.R.O.A Health
         </p>
     </footer>
+
+    <script>
+        function exibirnav() {
+            nav = document.getElementById('navigation')
+            icon = document.getElementById('idicon')
+            secondicon = document.getElementById('idicon2')
+            nav.style.display="block"
+            icon.style.display='none'
+            secondicon.style.display='block'
+        }
+
+        function fecharnav() {
+            nav = document.getElementById('navigation')
+            icon = document.getElementById('idicon')
+            secondicon = document.getElementById('idicon2')
+            nav.style.display='none'
+            icon.style.display='block'
+            secondicon.style.display='none'
+        }
+    </script>
 </body>
 </html>
