@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root{
+:root{ /* Raiz do código para armazenamento de cores, fontes, etc */
     --primarypurple: #741b47;
     --primarysalmon: #ffc9ab;
     --secondarysalmon: #fff2eb;

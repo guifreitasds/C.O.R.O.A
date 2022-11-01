@@ -8,7 +8,7 @@
     --primaryfont: 'Noto Serif', serif;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1085px) {
+@media screen and (min-width: 768px) and (max-width: 1085px) { /* Tela para Tablets */
     main h1{
         font-size: 4.5em;
     }
@@ -50,7 +50,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) { /* Tela para celulares */
     main h1{
         font-size: 4em;
         margin: 0px 20px;
