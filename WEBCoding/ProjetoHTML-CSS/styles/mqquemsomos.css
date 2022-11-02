@@ -9,6 +9,31 @@
 }
 
 @media screen and (max-width: 767px) { /* Tela para celulares */
+    main h1{
+        font-size: 3.5em;
+        margin: 0px 20px;
+        padding: 5px;
+    }
+
+    main{
+        width: 100vw;
+    }
+
+    p.subtext{
+        font-size: 1.5em;
+    }
+
+    main > section > ul{
+        width: 70vw;
+        padding: 25px;
+        color: #ffff;
+        background-color: var(--primarypurple);
+        text-align: left;
+        font-size: 1.2em;
+        margin:auto;
+        border-radius: 10px;
+    }
+
     div.icon{
         display: flex;
         background-color: var(--primarypurple);
