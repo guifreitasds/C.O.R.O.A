@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+:root{
+    --primarypurple: #741b47;
+    --primarysalmon: #ffc9ab;
+    --secondarysalmon: #fff2eb;
+
+    --primaryfont: 'Noto Serif', serif;
+}
+
+@media screen and (max-width: 767px) { /* Tela para celulares */
+    div.icon{
+        display: flex;
+        background-color: var(--primarypurple);
+        text-align: center;
+        width: 45px;
+        height: 45px;
+    }
+
+    div.icon2{
+        display: none;
+        background-color: var(--primarypurple);
+        text-align: center;
+        width: 30px;
+        height: 30px;
+    }
+
+    div.icon:hover{
+        cursor: pointer;
+        background-color: #c0c0c0c5;
+        transition: 100ms;
+    }
+
+    div.icon2:hover{
+        cursor: pointer;
+        background-color: #c0c0c0c5;
+    }
+
+    .material-icons{
+        color: white;
+        font-size: 2.7em;
+        display: block;
+        align-self: center;
+    }
+
+    
+    #iconclose{
+        font-size: 2em;
+    }
+
+    .material-icons:hover{
+        color: var(--primarypurple);
+    }
+    main > nav{
+        display: none;
+    }
+    div.withAside{
+        display: block;
+    }
+}
