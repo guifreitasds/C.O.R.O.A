@@ -25,7 +25,7 @@ main > section{
     padding-bottom: 50px;
 }
 
-main > section > ul{
+main > section > ul{ /* Declaração para montagem da lista de funcionalidades com um design limpo e acessível */
     width: 550px;
     padding: 25px;
     color: #ffff;

@@ -9,11 +9,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1085px) { /* Tela para Tablets */
-    main h1{
+    main h1{ /* Diminuição das fontes para adaptação à tela menor */
         font-size: 4.5em;
     }
 
-    main h2{
+    main h2{ 
         font-size: 1.5em;
     }
 

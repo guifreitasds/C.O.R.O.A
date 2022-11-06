@@ -19,7 +19,7 @@
         font-size: 1.5em;
     }
 
-    main > section > ul{
+    main > section > ul{ /* Diminuição da lista de funcionalidades */
         width: 70vw;
         padding: 25px;
         color: #ffff;
