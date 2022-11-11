@@ -67,14 +67,14 @@ header > div.registro{
 }
 
 div.registro > a{
+    font-size: 1em;
     text-decoration: none;
-    transition-duration: 200ms;
-    border-radius: 5px;
+    transition-duration: 300ms;
+    color: #741b4899;
 }
 
 div.registro > a:hover{
-    color: white; 
-    background-color: #741b47;
+    color: var(--primarypurple);
 }
 
 div.icon {
