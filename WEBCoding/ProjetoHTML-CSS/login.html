@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styleindex.css">
     <link rel="stylesheet" href="styles/mediaqueries/mqindex.css">
+    <link rel="stylesheet" href="styles/stylelogin.css">
 </head>
 <body onresize="mudarTamanho()">
     <header>
@@ -39,10 +40,25 @@
 
         <section class="purple">
             <form action="login.php" method="get">
-                <label for="mailid">E-mail</label>
-                <input type="email" name="mail" id="mailid" autocomplete="email" required placeholder="Digite seu e-mail">
-                <label for="passid">Senha</label>
-                <input type="password" name="pass" id="passid" autocomplete="current-password" required placeholder="Digite sua senha">
+                <div class="form">
+                    <div>
+                        <label for="mailid">E-mail</label>
+                        <input type="email" name="mail" id="mailid" autocomplete="email" required placeholder="Digite seu e-mail">
+                    </div>
+                    <div>
+                        <label for="passid">Senha</label>
+                        <input type="password" name="pass" id="passid" autocomplete="current-password" required placeholder="Digite sua senha">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div>
+                        <input type="reset" value="Limpar">                       
+                    </div>
+                    <div>
+                        <input type="submit" value="Login">
+                    </div>
+                </div>
+                <p>Ainda não possui uma conta? <a href="registro.html" class="primarypurple">Registre-se Aqui!</a></p>
             </form>
         </section>
     </main>

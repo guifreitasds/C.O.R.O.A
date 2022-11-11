@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{ /* Raiz do código para armazenamento de cores, fontes, etc */
+    --primarypurple: #741b47;
+    --primarysalmon: #ffc9ab;
+    --secondarysalmon: #fff2eb;
+
+    --primaryfont: 'Noto Serif', serif;
+}
+
+main > h1{
+    font-size: 3.8em;
+}
+
+div.form{
+    padding: 50px;
+    margin: auto;
+    width: 25%;
+    background-color: var(--primarypurple);
+    border-radius: 15px;
+}
+
+div.form > div{
+    padding: 20px;
+    color: white;
+    font-size: 1.1em;
+}
+
+div.form > div > label{
+    padding-right: 6px;
+}
+
+div.form > div > input{
+    width: 70%;
+    padding: 5px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: var(--primarysalmon);
+}
+
+
+
+div.buttons{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+div.buttons > div{
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+div.buttons > div > input{
+    color: var(--primarypurple);
+    background-color: white;
+    border-radius: 10%;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-color: var(--primarysalmon);
+    border-style: solid;
+    border-radius: 10%;
+    font-weight: bolder;
+    transition-duration: 200ms;
+}
+
+div.buttons > div > input:hover{
+    background-color: var(--primarypurple);
+    border-color: white;
+    color: var(--primarysalmon);
+    cursor: pointer;
+}
+
+section > form > div{
+    display: block;
+}
