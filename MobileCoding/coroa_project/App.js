@@ -24,10 +24,18 @@ export default function App() {
           <FontAwesome name='lock' size={20} color="#505050"></FontAwesome>
           <TextInput style={styles.passTextInp} placeholder='Digite sua senha'></TextInput>
         </View>
+        <TouchableOpacity style={styles.viewSubText}>
+          <Text style={styles.subTextForm}>Esqueceu a senha?</Text>
+        </TouchableOpacity>
       </View>
       <TouchableOpacity style={styles.logButton}>
         <Text style={styles.textButton}>Login</Text>
       </TouchableOpacity>
+      <View style={{flexDirection: 'row', alignItems:'center', marginTop: '5%'}}>
+        <Text>Não possui uma conta? 
+          <Text style={styles.textRegisterinForm}> Registre-se clicando aqui</Text>
+        </Text>
+      </View>
     </View>
   );
 }
@@ -39,7 +47,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   containerBox: {
-    marginTop: 200,
+    marginTop: '50%',
     width: 500,
     height: 130,
     backgroundColor: '#FFC9AB',
@@ -48,7 +56,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   containerInput: {
-    marginTop: 100,
+    marginTop: '20%',
     flexDirection: 'column',
     alignItems: 'center'
   },
@@ -98,19 +106,37 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   logButton: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
     borderRadius: 7,
     display: 'flex',
-    marginTop: 30,
+    marginTop: '7%',
     backgroundColor: '#741B47',
     width: '40%',
     height: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
+
   },
   textButton:{
     fontWeight: 'bold',
     fontSize: 18,
     color: '#fafafa',
     textAlign: 'center',
+  },
+
+  viewSubText: {
+    // View do 'Esqueceu a senha?'
+  },
+  subTextForm: {
+    // Text do 'Esqueceu a senha?'
+    textAlign: 'right',
+    alignItems: 'flex-end',
+    color: '#741B47',
+
+  },
+
+  textRegisterinForm: {
+    color: '#741B36',
   },
 });
