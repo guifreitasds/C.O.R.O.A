@@ -6,6 +6,8 @@ import Constants from 'expo-constants';
 
 
 export default function App() {
+  const [textoInput, mudaTexto] = React.useState('')
+
   return (
     <View style={styles.container}>
       <View style={styles.containerBox}>
@@ -18,7 +20,7 @@ export default function App() {
       <View style={styles.containerInput}>
         <View style={styles.inputcpf}>
           <FontAwesome name='user' size={20} color="#505050"></FontAwesome>
-          <TextInput style={styles.cpfTextInp} placeholder='Digite seu CPF'></TextInput>
+          <TextInput style={styles.cpfTextInp} placeholder='Digite seu CPF' onChangeText={mudaTexto}></TextInput>
         </View>
         <View style={styles.inputpassw}>
           <FontAwesome name='lock' size={20} color="#505050"></FontAwesome>
@@ -35,6 +37,9 @@ export default function App() {
         <Text>Não possui uma conta? 
           <Text style={styles.textRegisterinForm}> Registre-se clicando aqui</Text>
         </Text>
+      </View>
+      <View style={{marginTop: '5%'}}>
+        <Text style={{color: '#a11a4d'}}>Confirme seu CPF: {textoInput}</Text>
       </View>
     </View>
   );
