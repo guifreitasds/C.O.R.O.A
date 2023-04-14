@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styleindex.css">
     <link rel="stylesheet" href="styles/mediaqueries/mqindex.css">
-    <link rel="stylesheet" href="styles/stylelogin.css">
+    <link rel="stylesheet" href="styles/styleregister.css">
 </head>
 <body onresize="mudarTamanho()">
     <header>
@@ -36,39 +36,60 @@
             <a href="ajuda.html" target="_parent" class="last">Ajuda</a>
         </nav>
         <div class="icon2" id="idicon2" onclick="fecharnav()"><span class="material-icons" id="iconclose">close</span></div>
-        <h1>Faça seu Login</h1>
 
         <div class="vo">
-            <div id="caixa-mae-login">
+            <div id="caixa-mae-registro">
                 <div class="popup">
-                    <h2>Login</h2>
-                        <form action="#">
+                    <h2>Registre-se</h2>
+                        <form action="#" onsubmit="on_register()">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </span>
+                                <input type="text" required id="nameid">
+                                <label>Nome</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="id-card-outline"></ion-icon>
+                                </span>
+                                <input class="cpf" type="number" required id="cpfid">
+                                <label>CPF</label>
+                            </div>
+            
                             <div class="input-box">
                                 <span class="icon">
                                     <ion-icon name="mail"></ion-icon>
                                 </span>
-                                <input id="mail" type="email" required>
+                                <input type="email" required id="mailid">
                                 <label>Email</label>
                             </div>
                             <div class="input-box">
                                 <span class="icon" id="password-btn">
                                     <ion-icon name="lock-closed"></ion-icon>
                                 </span>
-                                <input id="passw" type="password" required>
+                                <input type="password" required id="passwid">
                                 <label>Senha</label>
                             </div>
-                            <div class="lembrar-senha">
+            
+                                <div class="box-date">
+                                    <p>Data de nascimento: </p>
+                                    <div class="input-box-date">
+                                        <input type="date" required id="dateid">
+                                    </div>
+                                </div>
+                            <div class="termos">
                                 <label>
-                                    <input type="checkbox">Lembrar senha.
+                                    <input type="checkbox">Eu aceito os termos e condições.
                                 </label>
-                                <a href="">Esqueceu a senha?</a>
                             </div>
-                            <button class="btn-login" onclick="confirm_user()">Entrar</button>
+                            <input type="submit" class="btn-cadastro" ></input>
                             <div class="login-register">
-                                <p>Não tem uma conta?
-                                    <a href="cadastro.html">Registre-se</a>
+                                <p>Já possui uma conta?
+                                    <a href="login.html">Login</a>
                                 </p>
                             </div>
+            
                         </form>
                 </div>
             </div>

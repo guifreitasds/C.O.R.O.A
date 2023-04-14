@@ -1,5 +1,5 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -90,9 +90,16 @@ section > form > div{
     display: block;
 }
 
-#caixa-mae-login{
+body{
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter',sans-serif;
+}
+
+#caixa-mae-registro{
+    position: relative;
     width: 400px;
-    height: 440px;
+    height: 610px;
     background: #731D4C;
     border-radius: 20px;
     display: flex;
@@ -101,9 +108,7 @@ section > form > div{
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
 }
 
-
-
-#caixa-mae-login .popup{
+#caixa-mae-registro .popup{
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -114,9 +119,17 @@ section > form > div{
 .popup h2{
     text-align: center;
     color: #fff;
-    font-size: 2.5em;
-    font-weight: 900;
-    margin-bottom: 10%;
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 8%;
+}
+
+.textinho{
+    text-align: center;
+    color: #fff;
+    font-size: 0.90em;
+    font-weight: 5;
+    margin-bottom: 8%;
 }
 
 form{
@@ -130,7 +143,6 @@ form{
     border-bottom: 2px solid #fff;
     margin: 25px 0;
     margin-top: 0;
-    margin-bottom: 12%;
 }
 
 .input-box label{
@@ -147,7 +159,7 @@ form{
 
 .input-box input:focus~label,
 .input-box input:valid~label{
-    top: -5px;
+    top: 3px;
 }
 
 .input-box input{
@@ -170,37 +182,70 @@ form{
     line-height: 57px;
 }
 
-#show-password-btn{
-    cursor: pointer;
-}
-
-.lembrar-senha{
-    font-size: 0.7em;
+.termos{
+    font-size: 0.6em;
     font-weight: 500;
     color: #fff;
-    margin: -15px 0 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
-.lembrar-senha label{
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+.termos label{
     display: flex;
     align-items: center;
 }
 
-.lembrar-senha a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 500;
-}
-
-.lembrar-senha a:hover{
+.termos a:hover{
     text-decoration: underline;
 }
 
-.btn-login{
+.box-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.box-date p{
+    color: #fff;
+    font-size: 0.8em;
+    margin-right: 35px;
+}
+
+.box-date input{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1);
+}
+.input-box-date{
+    position: relative;
+    width: 40%;
+    height: 30px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 15px;
+    margin-top: 0.2em;
+}
+
+.btn-cadastro{
     width: 100%;
     height: 35px;
     background: #F2B8A2;
@@ -209,14 +254,13 @@ form{
     font-weight: 700;
     cursor: pointer;
     outline: none;
-    margin-bottom: 0.7%;
+    margin-bottom: 2%;
 }
 
 .login-register{
     color: #fff;
     text-align: center;
     font-size: 0.8em;
-    margin-top: 10px;
 }
 
 .login-register a{
