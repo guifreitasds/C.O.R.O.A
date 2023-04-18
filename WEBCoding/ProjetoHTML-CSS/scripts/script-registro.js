@@ -48,7 +48,7 @@ function check_size_name(item) {
 function check_size_passw(item) {
   if(item.trim().length <=5 || item.trim().length == 0){
     return true
-    // Trocar para uma mensagem INNER HTML com setTimeOut
+    
   } else {
     return false
   }
@@ -81,10 +81,12 @@ function on_register() {
         }
       }
       else{
+        // Trocar para uma mensagem INNER HTML com setTimeOut
         alert('Senha minima de 6 caracteres')
       }
     }
     else{
+      // Trocar para uma mensagem INNER HTML com setTimeOut
       alert('Nome minimo de 3 caracteres')
     }
 
