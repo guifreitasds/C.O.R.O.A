@@ -37,16 +37,20 @@ function search_mail(keep_mail){
 }
 
 function check_size_name(item) {
-    if(item.trim() <=2 || item.trim().length == 0){
-        alert('Minimo de 3 caracteres')
-        // Trocar para uma mensagem INNER HTML com setTimeOut
+    if(item.trim().length <=2 || item.trim().length == 0){
+      // Trocar para uma mensagem INNER HTML com setTimeOut
+      return true
+    } else{
+      return false
     }
 }
 
 function check_size_passw(item) {
-  if(item.trim() <=5 || item.trim().length == 0){
-      alert('Minimo de 6 caracteres')
-      // Trocar para uma mensagem INNER HTML com setTimeOut
+  if(item.trim().length <=5 || item.trim().length == 0){
+    return true
+    // Trocar para uma mensagem INNER HTML com setTimeOut
+  } else {
+    return false
   }
 }
 
@@ -57,23 +61,33 @@ function on_register() {
   let password = document.getElementById('passwid').value
   let birthdate = document.getElementById('dateid').value
 
-  check_size_name(name)
-  check_size_passw(password)
+
 
   if(mail.slice(mail.trim().indexOf('@'), mail.trim().length-1).length <= 8){
     alert('Erro no email')
     //Mensagem INNER HTML com setTIme OUT de erro de email
   } else{
-      if(search_user(cpf)==-1 && search_mail(mail)==-1){
+    if(check_size_name(name)==false){
+      if(check_size_passw(password)==false){
+        if(search_user(cpf)==-1 && search_mail(mail)==-1){
           let objPerson = {'nome': name.toLowerCase().trim(), 'passw': password, 'mail': mail, 'cpf': cpf, 'birthdate': birthdate, 'registerdate': `${data.getUTCDate()}/${data.getMonth()+1}/${data.getFullYear()}`}
           users.push(objPerson)
           localStorage.setItem('cadastrados', JSON.stringify(users))
-          // alert('Usuário Cadastrado!')
-          window.location= "login.html"
-          
-      } else{
-          alert('usuario já cadastrado')
+          alert('Usuário Cadastrado!')
+          window.location('login.html')
+          return false
+        } else {
+            alert('usuario já cadastrado')
+        }
       }
+      else{
+        alert('Senha minima de 6 caracteres')
+      }
+    }
+    else{
+      alert('Nome minimo de 3 caracteres')
+    }
+
   }   
 }
 
