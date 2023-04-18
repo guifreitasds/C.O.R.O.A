@@ -93,7 +93,7 @@ section > form > div{
 #caixa-mae-login{
     width: 400px;
     height: 440px;
-    background: #731D4C;
+    background: var(--primarypurple);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -203,7 +203,7 @@ form{
 .btn-login{
     width: 100%;
     height: 35px;
-    background: #F2B8A2;
+    background: var(--primarysalmon);
     border: none;
     border-radius: 10px;
     font-weight: 700;
@@ -221,5 +221,5 @@ form{
 
 .login-register a{
     text-decoration: none;
-    color: #F2B8A2;
+    color: var(--primarysalmon);
 }

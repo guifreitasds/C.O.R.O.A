@@ -44,7 +44,6 @@ function check_size(item) {
 }
 
 function on_register() {
-  console.log(2)
   let name = document.getElementById('nameid').value
   let cpf = document.getElementById('cpfid').value
   let mail = document.getElementById('mailid').value
