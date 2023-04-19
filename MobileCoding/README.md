@@ -1,4 +1,4 @@
-# README
+# C.O.R.O.A Mobile Project
 
 Este repositório contém o código fonte do projeto C.O.R.O.A - Controle de Rotina da Terceira Idade, desenvolvido com React Native e Expo Go.
 
@@ -7,9 +7,9 @@ Este repositório contém o código fonte do projeto C.O.R.O.A - Controle de Rot
 Para executar o projeto, siga os passos abaixo:
 
 1. Faça o download do repositório para sua máquina;
-2. Instale o Node.js e o Expo Go em seu dispositivo móvel;
-3. Na pasta raiz do projeto, execute o comando `npm install` para instalar as dependências do projeto;
-4. Execute o comando `npm start` para iniciar o servidor local do Expo;
+2. Instale o Node.js e o Expo Go em seu dispositivo desktop e móvel, respectivamente;
+3. Na pasta raiz do projeto, execute o comando `yarn install` para instalar as dependências do projeto;
+4. Execute o comando `yarn start` para iniciar o servidor local do Expo;
 5. Escaneie o QR code com o aplicativo Expo Go para executar o projeto em seu dispositivo móvel.
 
 ## Resumo do projeto
