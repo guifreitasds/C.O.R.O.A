@@ -6,6 +6,13 @@ import Constants from 'expo-constants';
 
 
 export default function App() {
+  const [textoLoginInput, mudaTextoLogin] = React.useState('')
+  const [mostrarTexto, setMostrarTexto] = React.useState(false);
+
+  const handleLoginPress = () => {
+    setMostrarTexto(true);
+  }
+
   const [textoInput, mudaTexto] = React.useState('')
 
   return (
@@ -30,7 +37,7 @@ export default function App() {
           <Text style={styles.subTextForm}>Esqueceu a senha?</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.logButton}>
+      <TouchableOpacity style={styles.logButton} onPress={handleLoginPress}>
         <Text style={styles.textButton}>Login</Text>
       </TouchableOpacity>
       <View style={{flexDirection: 'row', alignItems:'center', marginTop: '5%'}}>
@@ -41,6 +48,11 @@ export default function App() {
       <View style={{marginTop: '5%'}}>
         <Text style={{color: '#a11a4d'}}>Confirme seu CPF: {textoInput}</Text>
       </View>
+      {mostrarTexto && (
+        <View style={{marginTop: '5%'}}>
+          <Text style={{color: '#a11a4d'}}>Faça seu login!</Text>
+        </View>
+      )}
     </View>
   );
 }
