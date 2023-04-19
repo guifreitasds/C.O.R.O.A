@@ -14,8 +14,11 @@ IconButton.addEventListener("click", function() {
   }
 });
 
-let users = []
+
+// funcao cadastrar
+
 let data = new Date()
+let users = []
 
 
 if(localStorage.getItem('cadastrados')){
@@ -74,7 +77,7 @@ function on_register() {
           users.push(objPerson)
           localStorage.setItem('cadastrados', JSON.stringify(users))
           alert('Usuário Cadastrado!')
-          window.location('login.html')
+          location.assign('login.html') //Aqui redirecionar depois de cadastrar
           return false
         } else {
             alert('usuario já cadastrado')
