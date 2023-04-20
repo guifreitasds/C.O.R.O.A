@@ -58,6 +58,7 @@ function check_size_passw(item) {
 }
 
 function on_register() {
+  let namerror = document.getElementById('namerror')
   let name = document.getElementById('nameid').value
   let cpf = document.getElementById('cpfid').value
   let mail = document.getElementById('mailid').value
@@ -85,12 +86,14 @@ function on_register() {
       }
       else{
         // Trocar para uma mensagem INNER HTML com setTimeOut
-        alert('Senha minima de 6 caracteres')
+        
       }
     }
     else{
       // Trocar para uma mensagem INNER HTML com setTimeOut
-      alert('Nome minimo de 3 caracteres')
+      setTimeout(()=>{namerror.innerHTML = "<p>Minímo de 3 caracteres</p>"}
+      ,3000)
+      
     }
 
   }   
