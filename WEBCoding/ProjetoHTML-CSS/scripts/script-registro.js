@@ -65,38 +65,79 @@ function on_register() {
   let password = document.getElementById('passwid').value
   let birthdate = document.getElementById('dateid').value
 
+  let objPerson = {'nome': name.toLowerCase().trim(), 'passw': password, 'mail': mail, 'cpf': cpf, 'birthdate': birthdate, 'registerdate': `${data.getUTCDate()}/${data.getMonth()+1}/${data.getFullYear()}`}
 
 
-  if(mail.slice(mail.trim().indexOf('@'), mail.trim().length-1).length <= 8){
-    alert('Erro no email')
-    //Mensagem INNER HTML com setTIme OUT de erro de email
-  } else{
-    if(check_size_name(name)==false){
-      if(check_size_passw(password)==false){
-        if(search_user(cpf)==-1 && search_mail(mail)==-1){
-          let objPerson = {'nome': name.toLowerCase().trim(), 'passw': password, 'mail': mail, 'cpf': cpf, 'birthdate': birthdate, 'registerdate': `${data.getUTCDate()}/${data.getMonth()+1}/${data.getFullYear()}`}
+
+  // if(mail.slice(mail.trim().indexOf('@'), mail.trim().length-1).length <= 8){
+  //   alert('Erro no email')
+  //   //Mensagem INNER HTML com setTIme OUT de erro de email
+  // } else{
+  //   if(check_size_name(name)==false){
+  //     if(check_size_passw(password)==false){
+  //       if(search_user(cpf)==-1 && search_mail(mail)==-1){
+  //         let objPerson = {'nome': name.toLowerCase().trim(), 'passw': password, 'mail': mail, 'cpf': cpf, 'birthdate': birthdate, 'registerdate': `${data.getUTCDate()}/${data.getMonth()+1}/${data.getFullYear()}`}
+  //         users.push(objPerson)
+  //         localStorage.setItem('cadastrados', JSON.stringify(users))
+  //         alert('Usuário Cadastrado!')
+  //         location.assign('login.html') //Aqui redirecionar depois de cadastrar
+  //         return false
+  //       } else {
+  //           alert('usuario já cadastrado')
+  //       }
+  //     }
+  //     else{
+  //       // Trocar para uma mensagem INNER HTML com setTimeOut
+  //       return false
+  //     }
+  //   }
+  //   else{
+  //     // Trocar para uma mensagem INNER HTML com setTimeOut
+  //     setTimeout(()=>{namerror.innerHTML = "<p>Minímo de 3 caracteres</p>"}
+  //     ,3000)
+  //     return false
+  //   }
+
+  // }   
+
+
+
+    
+  if (name.length > 2 &&
+      password.length > 2 &&
+      name.trim().length != 0 &&
+      password.trim().length != 0
+  ) {
+      if (search_user(cpf)==-1 && search_mail(mail)==-1) {
           users.push(objPerson)
           localStorage.setItem('cadastrados', JSON.stringify(users))
           alert('Usuário Cadastrado!')
-          location.assign('login.html') //Aqui redirecionar depois de cadastrar
-          return false
-        } else {
-            alert('usuario já cadastrado')
-        }
+          location.assign('login.html')
+      }else{
+          alert("Usuário já existe!")
       }
-      else{
-        // Trocar para uma mensagem INNER HTML com setTimeOut
-        
-      }
-    }
-    else{
-      // Trocar para uma mensagem INNER HTML com setTimeOut
-      setTimeout(()=>{namerror.innerHTML = "<p>Minímo de 3 caracteres</p>"}
-      ,3000)
-      
-    }
-
-  }   
+  }
+  if (name.length <= 2 ||
+      name.trim().length == 0) {
+      document.getElementById('namerror').innerHTML = `Mínimo de três caracteres`
+      setTimeout(() => {
+          document.getElementById('namerror').innerHTML = ``
+      }, 3000)
+  }
+  if (cpf.length != 11 ||
+    name.trim().length == 0) {
+    document.getElementById('cpferror').innerHTML = `Digite o CPF corretamente`
+    setTimeout(() => {
+        document.getElementById('cpferror').innerHTML = ``
+    }, 3000)
+}
+  if (password.length <= 5 || password.length >=11 ||
+      password.trim().length == 0) {
+      document.getElementById('passerror').innerHTML = `Digite uma senha com 6-10 caracteres`
+      setTimeout(() => {
+          document.getElementById('passerror').innerHTML = ``
+      }, 3000)
+  }
 }
 
 

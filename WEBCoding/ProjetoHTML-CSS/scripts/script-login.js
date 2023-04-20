@@ -39,7 +39,7 @@ function confirm_user() {
   let keep_mail = document.getElementById('mail').value
   let keep_pass = document.getElementById('passw').value
   if(search_user(keep_mail, keep_pass)!=-1){
-    alert('usuário encontrado')
+    alert('Usuário encontrado!')
     window.location = 'home.html'
   } else{
     alert('usuário não encontrado')
