@@ -268,7 +268,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--primarysalmon);
 }
 
-#namerror, #passerror, #cpferror{
+#namerror, #passerror, #cpferror, #mailerror{
     margin-top: 5px;
     font-weight: bold;
     font-size: 0.8em;

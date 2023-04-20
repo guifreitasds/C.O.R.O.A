@@ -100,43 +100,43 @@ function on_register() {
 
   // }   
 
-
-
-    
-  if (name.length > 2 &&
-      password.length > 2 &&
+  if (name.length > 3 &&
+      password.length >= 6 && password.length <=10 &&
       name.trim().length != 0 &&
-      password.trim().length != 0
-  ) {
+      password.trim().length != 0 &&
+      cpf.length == 11) {
       if (search_user(cpf)==-1 && search_mail(mail)==-1) {
           users.push(objPerson)
           localStorage.setItem('cadastrados', JSON.stringify(users))
           alert('Usuário Cadastrado!')
-          location.assign('login.html')
-      }else{
+          window.location.assign = "login.html"
+      } else{
           alert("Usuário já existe!")
       }
   }
-  if (name.length <= 2 ||
-      name.trim().length == 0) {
-      document.getElementById('namerror').innerHTML = `Mínimo de três caracteres`
+  if (name.length <= 2 || name.trim().length == 0) {
+      document.getElementById('namerror').innerHTML = 'Mínimo de três caracteres'
       setTimeout(() => {
-          document.getElementById('namerror').innerHTML = ``
-      }, 3000)
+          document.getElementById('namerror').innerHTML = ""
+      }, 4000)
   }
-  if (cpf.length != 11 ||
-    name.trim().length == 0) {
-    document.getElementById('cpferror').innerHTML = `Digite o CPF corretamente`
+  if(cpf.length != 11 || name.trim().length == 0) {
+    document.getElementById('cpferror').innerHTML = 'Digite o CPF corretamente'
     setTimeout(() => {
-        document.getElementById('cpferror').innerHTML = ``
-    }, 3000)
-}
-  if (password.length <= 5 || password.length >=11 ||
-      password.trim().length == 0) {
-      document.getElementById('passerror').innerHTML = `Digite uma senha com 6-10 caracteres`
+        document.getElementById('cpferror').innerHTML = ""
+    }, 4000)
+  }
+  if (mail.slice(mail.trim().indexOf('@'), mail.trim().length-1).length <= 8) {
+    document.getElementById('mailerror').innerHTML = 'Digite o email corretamente'
+    setTimeout(() => {
+        document.getElementById('mailerror').innerHTML = ""
+    }, 4000)
+  }
+  if (password.length <= 5 || password.length >=11 || password.trim().length == 0) {
+      document.getElementById('passerror').innerHTML = 'Digite uma senha com 6-10 caracteres'
       setTimeout(() => {
-          document.getElementById('passerror').innerHTML = ``
-      }, 3000)
+          document.getElementById('passerror').innerHTML = ""
+      }, 4000)
   }
 }
 
