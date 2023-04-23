@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root {
+  /* Raiz do código para armazenamento de cores, fontes, etc */
+  --primarypurple: #741b47;
+  --primarysalmon: #ffc9ab;
+  --secondarysalmon: #fff2eb;
+
+  --primaryfont: 'Noto Serif', serif;
+}
+
+main {
+  text-align: center;
+  
+}
+
+.container{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+figure{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sectionBox {
+  display: flex;
+  /* align-items: 'first baseline'; */
+
+}
+
+.sectionBox p{
+  padding-top: 50px;
+  padding-right: 20px;
+  /* background-color: aqua; */
+}
+.container img{
+  max-width: 300px;
+  max-height: 600px;
+  width: auto; 
+  height: auto;
+  
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+
+}
+
