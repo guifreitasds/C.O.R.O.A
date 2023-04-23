@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Usando o C.O.R.O.A</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/mediaqueries/mqindex.css">
+	<link rel="stylesheet" href="styles/usandoOCOROA.css">
+</head>
+
+<body onresize="mudarTamanho()">
+	<header>
+		<div class="logo">
+			<img src="assets/COROA.png" alt="Logo do COROA">
+			<h1>C . O . R . O . A</h1>
+		</div>
+		<div class="registro">
+			<a href="login.html" class="primarypurple">
+				Login
+			</a>
+			<a href="registro.html" class="primarypurple">
+				Registrar
+			</a>
+		</div>
+	</header>
+	<main>
+		<div class="icon" id="idicon" onclick="exibirnav()"><span class="material-icons">menu</span></div>
+		<!-- Declaração do ícone utilizado na versão mobile -->
+		<nav id="navigation">
+			<a href="index.html">Início</a>
+			<p style="display: inline;">|</p>
+			<a href="quemsomos.html" target="_parent">Quem Somos?</a>
+			<p style="display: inline;">|</p>
+			<a href="ajuda.html" target="_parent" class="last">Ajuda</a>
+		</nav>
+		<div class="icon2" id="idicon2" onclick="fecharnav()"><span class="material-icons" id="iconclose">close</span></div>
+		<div class="container">
+			
+			<section>
+				<h1>Usando o C.O.R.O.A</h1>
+				<p>Você sabia que o C.O.R.O.A é um aplicativo mobile? Este site tem o propósito de te apresentar quem somos e como
+					podemos te ajudar, mas você precisará de um dispositivo mobile para usar nosso serviços. Você não precisa se
+					preocupar, sendo você um <i>expert</i> ou um completo neófito na utilização de um celular, o nosso aplicativo
+					possuiuma interface simples e intuitiva, assim você poderá encontra facilmente tudo que precisar</p>
+				<p>
+					Neste tutorial iremos te mostrar como baixar e o que fazer ao primeiro contato com o aplicativo.
+				</p>
+			</section>
+			<section>
+				<h2>Instalação</h2>
+				<p>
+					Abaixo você poderá encontrar as instruções para instalar nosso aplicativo tanto em celulares Android quanto em
+					iPhones.
+				</p>
+				<section>
+					<h3>Instalação no Android</h3>
+					<p>
+						Para começar, você precisará baixar o nosso aplicativo na loja de aplicativos do seu celular. Se você está
+						usando um
+						Android, você pode <a href="#" target="_blank">aqui</a> para ser redirecionado para o link do nosso aplicativo
+						diretamente na loja de aplicativos do Android. Ou, se preferir fazer isso você mesmo, você usará o aplicativo
+						<b>Google Play Store</b> que já vem instalado em seu telefone Android. Abra-o e na barra de pesquisa digite
+						<span class="midwords" style="font-weight: bold">COROA</span>, abra o aplicativo e clique em <b>instalar</b>.
+					</p>
+				</section>
+				<section>
+					<h3>Instalação no iPhone</h3>
+					<p>Para começar, você precisará baixar o nosso aplicativo na loja de aplicativos do seu celular. Se você está
+						usando um iPhone, você pode clicar <a href="#" target="_blank">aqui</a> para ser redirecionado para o link do
+						nosso aplicativo diretamente na <b>App store</b>. Ou, se preferir fazer isso você mesmo, você usará o
+						aplicativo <b>Apple Store</b>, abra-o e na barra de pesquisa digite <span class="midwords" style="font-weight: bold">COROA</span>,
+						abra o aplicativo e clique em <b>instalar</b>.</p>
+				</section>
+			</section>
+			<section>
+				<h2>Primeiro contato</h2>
+				<section>
+					<h3>Já possui uma conta?</h3>
+					<div class="sectionBox">
+						<p>Já no seu dispositivo mobile, caso você já possua uma conta pode simplesmente usar seu CPF e senha nas duas
+							caixas de texto que se encontra ao centro
+							e clicar em <kbd>Login</kbd>. O termo login refere-se ao ato de informar suas credenciais para ter acesso ao
+							sistema.</p>
+
+						<figure>
+							<img src="assets/tutorialAssets/telaLogin.png" alt="exemplo de tela de login">
+							<figcaption>Exemplo de tela de login</figcaption>
+						</figure>
+	
+					</div>
+				</section>
+				<section>
+					<h3>Ainda não possui uma conta?</h3>
+				<div class="sectionBox">
+					<p>Caso ainda não possua uma conta, clique em <span style='color:#741B47'><b>Registre-se</b></span> logo
+						abaixo
+						do botão
+						<span style='color:#741B47'><kbd>Login</kbd></span> e você será direcionado a nossa página de registro.
+					</p>
+					<figure>
+						<img src="./assets/tutorialAssets/telaLoginRegistreSe.png" alt="exemplo de tela">
+					</figure>
+				</div>
+<div class="sectionBox">
+	
+						<p>
+							Agora, temos dois tipos de cadastro, o do <span style='color:#741B47'><b>cuidador</b></span>e o <span
+								style='color:#741B47'><b>paciente</b></span>. Se você for um Cuidador de idoso, escolha a opção cuidador,
+							caso você seja um idoso escolha a opção paciente. Como paciente você será capaz de cadastrar um cuidado mais
+							tarde e se você for um cuidador, poderá cadastra um cliente posteriormente, ou vincular o seu perfil com o
+							de um idoso já cadastrado, mas veremos isso mais tarde.<br><br>
+							Na página de registro, preencha nossos formulário com as informações solicitadas. Você pode ficar tranquilo,
+							seus dados estão protegidos pela <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+								target="_blank">Lei Geral
+								de Proteção de Dados Pessoais</a>.
+						</p>
+						<figure>
+							<img src="./assets/tutorialAssets/telaEscolha.png" alt="exemplo de tela">
+						</figure>
+</div>
+				</section>
+				<section>
+					<h3>Formulário do <strong>Paciente</strong></h3>
+<dive class="sectionBox">
+
+	<p>Após entrar com as informações solicitadas, clique em <span style='color: #741B47'>Registrar</span>.<br><br>
+	Fique esperto, o símbolo <span style='color: red'>*</span> indica que o campo é obrigatório e precisa ser
+	preenchido.
+	</p>
+	
+	
+						<figure>
+							<img src="./assets/tutorialAssets/TelaRegistroPaciente.png" alt="exemplo de imagem">
+						</figure>
+						
+</dive>		
+				</section>
+				<section>
+					<h3>Formulário do <strong>CUIDADOR</strong></h3>
+<div class="sectionBox">
+	
+						<p>Se você for um cuidador, deverá fazer seu cadastro indicando os dados solicitados.
+							<br><br>
+						Os quadros com o símbolo asterisco ( <span style='color: red'>*</span> ) são de preenchimento obrigatório.</p>
+						<figure>
+							<img src="./assets/tutorialAssets/TelaRegistroCuidador.png" alt="exemplo de tela">
+						</figure>
+	
+</div>
+				</section>
+			</section>
+			<section>
+				<h2>Primeira tela no aplicativo</h2>
+<div class="sectionBox">
+					<p>Parabéns, agora que você já realizou seu cadastro e fez login, você estará na página Home. Aqui você poderácriar lembretes para tomar seus remédios, cadastrar um cuidador/paciente, abrir o seu relatório diário e atémesmo conversar com seu cuidador/paciente através da opção de chat.
+					<br><br>
+					Como é seu primeiro contato, o aplicativo terá um breve tutorial, ele é bem simples e tudo que você precisa fazer é clicar em <span style='color:#741B47'><b>Próximo</b></span> depois da leitura.
+					<br><br>
+					<b>Dica IMPORTANTE:</b>
+					<br><br>
+					Informe seu peso e altura quando solicitados, essas informações podem nos ser úteis para envio de notificações no futuro. Não se preocupe, seus dados estão seguros.</p>
+					<figure>
+						<img src="./assets/tutorialAssets/TelaOpt1.png" alt="exemplo de tela">
+					</figure>
+</div>
+				<section>
+					<h3>Cadastrar remédio</h3>
+<div class="sectionBox">
+	
+						<p>Para cadastrar um remédio, clique na opção cadastrar remédio. Uma nova página será exibida, indique o
+							nome do remédio
+							que deseja cadastrar e clique no botão <kbd>+</kbd>. Em seguida indique o intervalo de tempo em que você
+							deve consumir
+							do medicamento e o período do tratamento. Marque a opção **prazo definido** caso seu médico não tenha
+							estipulado um
+							prazo.</p>
+						<figure>
+							<img src="./assets/tutorialAssets/TelaCadastroRemedios.png" alt="exemplo de tela">
+						</figure>
+	
+</div>
+				</section>
+				<section>
+					<h3>Cadastro de cuidador</h3>
+<div class="sectionBox">
+	
+						<p>Para cadastrar seu cuidador, você verá uma tela parecida com a tela onde realizou seu cadastro. Basta apenas informar os dados solicitados.<br><br>
+						Lembre-se que os itens com o símbolo <span style='color: red'>*</span> são de preenchimento obrigatório.
+						<br><br>
+						OBS: Se o seu cuidador já possui um cadastro, você não precisa fazer um novo cadastro, basta procurar por ele. No final da tela onde está escrito <strong>Nome do cuidado</strong> basta fazer uma pesquisa pelo seu cuidador.</p>
+						<figure>
+							<img src="./assets/tutorialAssets/TelaRegistroCuidadorPac.png" alt="exemplo de tela">
+						</figure>
+	
+</div>
+				</section>
+				<section>
+					<h3>Cadastrar paciente</h3>
+					<div class="sectionBox">
+						
+						<p>Cuidador, para cadastrar um paciente basta informar os dados solicitados e clicar em <span style='color: #741B47'>Registrar</span>.
+							<br><br>
+						<span style=' color:#741B47 '>Pronto</span> A partir de agora você será notificado sempre que a hora de tomar seu medicamente chegar, também será lembrado de se manter hidratado e poderá conversar diretamente com seu cuidador/paciente de forma rápida e simples.</p>
+						<figure>
+							<img src="./assets/tutorialAssets/TelaCadastroPaciente.png" alt="exemplo de tela">
+						</figure>	
+					</div>
+				</section>
+			</section>
+			<br><br><br>
+		</div>
+	</main>
+	<footer>
+		<div class="footerdiv">
+			<img src="assets/COROA-nofill.png" alt="Logo do C.O.R.O.A">
+			<div class="firstcol">
+				<a href="#">
+					<p class="firstrow">Privacidade</p>
+				</a>
+				<a href="#">
+					<p class="secondrow">Suporte</p>
+				</a>
+				<a href="#">
+					<p class="thirdrow">Acessibilidade</p>
+				</a>
+			</div>
+		</div>
+		<p style="text-align: center; font-weight: bold;">
+			&copy; 2022 C.O.R.O.A Health
+		</p>
+	</footer>
+</body>
+
+</html>
