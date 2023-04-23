@@ -58,7 +58,6 @@ function check_size_passw(item) {
 }
 
 function on_register() {
-  let namerror = document.getElementById('namerror')
   let name = document.getElementById('nameid').value
   let cpf = document.getElementById('cpfid').value
   let mail = document.getElementById('mailid').value

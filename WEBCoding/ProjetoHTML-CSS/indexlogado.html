@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.O.R.O.A (W.I.P)</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleindex.css">
+    <link rel="stylesheet" href="styles/mediaqueries/mqindex.css">
+</head>
+<body onresize="mudarTamanho()">
+    <header>
+        <div class="logo">
+            <img src="assets/COROA.png" alt="Logo do COROA">
+            <h1>C . O . R . O . A</h1>
+        </div>
+        <div class="registro">
+            <img src="assets/iconuser.png" style="width: 27%;"></img>
+            <a href="registro.html" class="primarypurple">
+                <p id="username">C.O.R.O.A User</p>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="icon" id="idicon" onclick="exibirnav()"><span class="material-icons">menu</span></div> <!-- Declaração do ícone utilizado na versão mobile -->
+        <nav id="navigation">
+            <a href="#">Início</a>
+            <p style="display: inline;">|</p>
+            <a href="quemsomos.html" target="_parent">Quem Somos?</a>
+            <p style="display: inline;">|</p>
+            <a href="ajuda.html" target="_parent" class="last">Ajuda</a>
+        </nav>
+        <div class="icon2" id="idicon2" onclick="fecharnav()"><span class="material-icons" id="iconclose">close</span></div>
+        <section>
+            <h1>
+                <span class="firstletter">C</span>uidado, <span class="firstletter">O</span>rientação,
+                <span class="firstletter">R</span>espeito, <span class="firstletter">O</span>bediência e <span class="firstletter">A</span>mor:
+            </h1>
+            <h2 class="sub">
+                Esses são os 5 pilares que nos guiam para cuidar da sua saúde.
+            </h2>
+            <p class="fromsub">
+                O objetivo do C.O.R.O.A é auxiliar no <span class="midwords">cuidado</span> da saúde e <span class="midwords">bem-estar</span> de pessoas na 3ª idade.
+            </p>
+
+            <div class="withAside">
+                <picture> <!-- Tag picture armazenando fotos menores que a original para montagem da responsividade -->
+                    <source media="(max-width: 1085px)" srcset="assets/imgCellphone-M.png">
+                    <img src="assets/imgCellphone.png" alt="Imagem do aplicativo do Coroa para celular" id="imgCellphone">
+                </picture>
+                <div style="font-weight: bold;" id="asidetext">
+                    <p id="titlefromaside">Cuide da <span class="midwords">sua saúde!</span></p>
+                    <p id="subtitlefromaside">Agende todos seus medicamentos e receba relatórios diários sobre sua rotina!</p>
+                    <p id="textfromaside">Nunca perca a hora dos seus remédios e tenha inúmeras informações sobre sua saúde com registros do seu cuidador.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer> <!-- Footer utilizado para links extras -->
+        <div class="footerdiv">
+            <img src="assets/COROA-nofill.png" alt="Logo do C.O.R.O.A">
+            <div class="firstcol">
+                <a href="#">
+                    <p class="firstrow">Privacidade</p>
+                </a>
+                <a href="#">
+                    <p class="secondrow">Suporte</p>
+                </a>
+                <a href="#">
+                    <p class="thirdrow">Acessibilidade</p>
+                </a>
+            </div>
+        </div>
+        <p style="text-align: center; font-weight: bold;">
+           &copy; 2022 C.O.R.O.A Health
+        </p>
+    </footer>
+
+    <script src="scripts/scriptgeneral.js"></script>
+</body>
+</html>
