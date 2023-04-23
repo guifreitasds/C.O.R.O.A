@@ -155,7 +155,7 @@ footer{
 
 div.footerdiv{
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 div.footerdiv > p{
