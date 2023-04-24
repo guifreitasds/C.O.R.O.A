@@ -40,7 +40,8 @@ function confirm_user() {
   let keep_pass = document.getElementById('passw').value
   if(search_user(keep_mail, keep_pass)!=-1){
     alert('Usuário encontrado!')
-    window.location.assign = 'indexlogado.html'
+    window.location = "indexlogado.html";
+    window.location.reload();
   } else{
     alert('usuário não encontrado')
   }

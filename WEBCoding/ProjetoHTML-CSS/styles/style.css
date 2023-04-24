@@ -62,7 +62,7 @@ header > div.registro > a{
 header > div.registro{
     display: flex;
     position: absolute;
-    top: 20%;
+    top: 32%;
     right: 0.2%;
 }
 

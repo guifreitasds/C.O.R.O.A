@@ -140,17 +140,17 @@ function on_register() {
 }
 
 
-// let enter_name = document.getElementById('nameid')
-// let enter_pass = document.getElementById('passwid')
+let enter_name = document.getElementById('nameid')
+let enter_pass = document.getElementById('passwid')
 
-// enter_name.addEventListener('keypress',(event)=>{
-//     if(event.key == "Enter"){
-//         on_register();
-//     }
-// })
-// enter_pass.addEventListener('keypress',(event)=>{
-//     if(event.key == "Enter"){
-//         on_register();
-//     }
-// })
+enter_name.addEventListener('keypress',(event)=>{
+    if(event.key == "Enter"){
+        on_register();
+    }
+})
+enter_pass.addEventListener('keypress',(event)=>{
+    if(event.key == "Enter"){
+        on_register();
+    }
+})
 
