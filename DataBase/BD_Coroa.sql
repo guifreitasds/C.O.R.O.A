@@ -30,6 +30,15 @@ CREATE TABLE `medicines` (
   `created_at` timestamp
 );
 
-ALTER TABLE `medicines` ADD FOREIGN KEY (`patient_id`) REFERENCES `patient` (`id`);
+CREATE TABLE `medicines_patient` (
+  `medicines_patient_id` integer,
+  `patient_id` integer,
+  PRIMARY KEY (`medicines_patient_id`, `patient_id`)
+);
+
+ALTER TABLE `medicines_patient` ADD FOREIGN KEY (`medicines_patient_id`) REFERENCES `medicines` (`patient_id`);
+
+ALTER TABLE `medicines_patient` ADD FOREIGN KEY (`patient_id`) REFERENCES `patient` (`id`);
+
 
 ALTER TABLE `patient` ADD FOREIGN KEY (`caregiver_id`) REFERENCES `caregiver` (`id`);
