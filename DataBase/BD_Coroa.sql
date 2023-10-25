@@ -25,8 +25,6 @@ CREATE TABLE `medicines` (
   `id` integer PRIMARY KEY,
   `title` varchar(255),
   `body` text COMMENT 'Medicine description',
-  `patient_id` integer,
-  `status` varchar(255),
   `created_at` timestamp
 );
 
