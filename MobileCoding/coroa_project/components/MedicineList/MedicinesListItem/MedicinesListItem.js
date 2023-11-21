@@ -1,18 +1,7 @@
 import { StyleSheet, View, Text, Image } from "react-native";
 
 export function MedicinesListItem(props) {
-    return(
-        <View style={styles.container}>
-            <View>
-                <Image style={styles.image} source={props.source}></Image>
-            </View>
 
-            <View style={styles.information}>
-                <Text style={styles.name}>{props.name}</Text>
-                <Text style={styles.hour}>Próxima hora: {props.hour}</Text>
-            </View>
-        </View>
-    );
 }
 
 const styles = StyleSheet.create({

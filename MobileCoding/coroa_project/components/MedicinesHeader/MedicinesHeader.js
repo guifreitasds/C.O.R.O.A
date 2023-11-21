@@ -10,7 +10,7 @@ export function MedicinesHeader(props) {
         <View style={styles.alignItemsCenter}>
             <Text style={styles.subText}>É para não se esquecer!</Text>
         </View>
-        <TouchableOpacity style={styles.containerTextButton}>
+        <TouchableOpacity style={styles.containerTextButton} onPress={props.func}>
             <Text style={styles.textButton}>+</Text>
         </TouchableOpacity>
     </View>
@@ -35,14 +35,15 @@ const styles = StyleSheet.create({
         marginTop: '3%'
     },
     containerTextButton: {
+        display: 'flex',
         backgroundColor: '#f0f0f0',
         marginLeft: 20,
-        marginTop: 20,
-        width: '20%',
-        height: '15%',
-        borderRadius: 20,
+        marginTop: 30,
+        width: '13%',
+        height: '20%',
+        borderRadius: 100,
         justifyContent: 'center',
-        paddingLeft: '3%'
+        alignItems:'center',
     },
     textButton: {
         color: '#741B47',

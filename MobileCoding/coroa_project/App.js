@@ -11,6 +11,7 @@ import { HelpScreen } from './screens/help';
 import { TestScreen } from './screens/test';
 import { LoginScreen } from './screens/login'
 import { AboutScreen } from './screens/about';
+import { CreateScreen } from './screens/create';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -55,10 +56,12 @@ export default function App() {
         <Stack.Screen name='Chat' component={TestScreen}/>
         <Stack.Screen name='Login' component={LoginScreen}/>
         <Stack.Screen name='About' component={AboutScreen}/>
+        <Stack.Screen name='Remédio' component={CreateScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
 
 
 
@@ -69,4 +72,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  
 });
