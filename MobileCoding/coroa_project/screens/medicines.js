@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, FlatList } from 'react-native';
 import { CoroaImgText } from '../components/CoroaImgText/CoroaImgText';
 import styles from '../styles/styleMedicines';
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { MedicinesList } from '../components/MedicineList/MedicinesList';
 import { MedicinesHeader } from '../components/MedicinesHeader/MedicinesHeader';
 
@@ -12,41 +12,56 @@ import { MedicinesHeader } from '../components/MedicinesHeader/MedicinesHeader';
 //   {key: 4, name: 'Genérico 4', hour: '12:00', source: require('../assets/generico.jpeg')}
 // ]
 
-export function MedicinesScreen({route, navigation}) {
+export function MedicinesScreen({ route, navigation, props }) {
   const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
+  const LoadData = () => {
     fetch('http://192.168.1.104:5000/get', {
       method: 'GET'
     })
-    .then(resp => resp.json())
-    .then(medicine => {
-      setData(medicine)
-    })
+      .then(resp => resp.json())
+      .then(medicine => {
+        setData(medicine)
+        setLoading(false)
+      })
+      .catch(error => console.log(error))
+  }
+
+  useEffect(() => {
+    LoadData()
   }, [])
 
-  return(
+  const clickedItem = (data) => {
+    props.navegation.navigate('Details', { data: data })
+  }
+
+  return (
     <View style={styles.container}>
-      <View style={styles.alignItemsCenter}> 
-        <CoroaImgText/>
-      </View>   
-      <MedicinesHeader func={()=>{
+      <View style={styles.alignItemsCenter}>
+        <CoroaImgText />
+      </View>
+      <MedicinesHeader func={() => {
         navigation.navigate('Remédio')
-      }}/>
+      }} />
       <View style={styles.containerMedicines}>
         <View style={styles.titletoMedicines}>
-          <Text style={{color: '#f0f0f0', fontSize: 22, fontFamily: 'serif', fontWeight: 'bold'}}>Remédios Cadastrados</Text>
+          <Text style={{ color: '#f0f0f0', fontSize: 22, fontFamily: 'serif', fontWeight: 'bold' }}>Remédios Cadastrados</Text>
         </View>
-        <FlatList 
-        data={data}
-        renderItem={({item} ) =>(
-          <View style={styles.containerMed}>
+        <FlatList
+          data={data}
+          onRefresh={() => LoadData()}
+          refreshing={loading}
+          renderItem={({ item }) => (
+            <View style={styles.containerMed}
+              onPress={() => clickedItem(item)}
+            >
               <Text style={styles.name}>{item.title}</Text>
               <Text style={styles.hour}>Descrição: {item.description}</Text>
-          </View>
-        )}
-        keyExtractor={item => `${item.id}`}
-        style={styles.containerFlat}/>
+            </View>
+          )}
+          keyExtractor={item => `${item.id}`}
+          style={styles.containerFlat} />
       </View>
     </View>
   );
