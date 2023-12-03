@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, ScrollView, TouchableOpacity, FlatList } from '
 import { CoroaImgText } from '../components/CoroaImgText/CoroaImgText';
 import styles from '../styles/styleMedicines';
 import React, { useState, useEffect } from 'react'
-import { MedicinesList } from '../components/MedicineList/MedicinesList';
 import { MedicinesHeader } from '../components/MedicinesHeader/MedicinesHeader';
 
 // const data = [
@@ -33,7 +32,7 @@ export function MedicinesScreen({ route, navigation, props }) {
   }, [])
 
   const clickedItem = (data) => {
-    props.navegation.navigate('Details', { data: data })
+    navigation.navigate('Details', { data: data })
   }
 
   return (
@@ -42,7 +41,7 @@ export function MedicinesScreen({ route, navigation, props }) {
         <CoroaImgText />
       </View>
       <MedicinesHeader func={() => {
-        navigation.navigate('Remédio')
+        navigation.navigate('Create')
       }} />
       <View style={styles.containerMedicines}>
         <View style={styles.titletoMedicines}>
@@ -53,10 +52,8 @@ export function MedicinesScreen({ route, navigation, props }) {
           onRefresh={() => LoadData()}
           refreshing={loading}
           renderItem={({ item }) => (
-            <View style={styles.containerMed}
-              onPress={() => clickedItem(item)}
-            >
-              <Text style={styles.name}>{item.title}</Text>
+            <View style={styles.containerMed}>
+              <Text style={styles.name} onPress={() => clickedItem(item)}>{item.title}</Text>
               <Text style={styles.hour}>Descrição: {item.description}</Text>
             </View>
           )}

@@ -16,7 +16,7 @@ export function CreateScreen({ navigation, props }) {
         })
             .then(resp => resp.json())
             .then(data => {
-                props.navigation.navigate('Medicines')
+                navigation.navigate('Medicines')
             })
             .catch(error => console.log(error))
     }
@@ -27,15 +27,14 @@ export function CreateScreen({ navigation, props }) {
             <TextInput style={styles.inputTitle}
                 label="Titulo"
                 value={title}
-                mode="outlined"
+                placeholder='Remédio'
                 onChangeText={text => setTitle(text)}
             />
-            <TextInput style={{ margin: 10 }}
+            <TextInput style={styles.inputTitle}
                 label="Descrição"
                 value={description}
-                mode="outlined"
                 multiline
-                numberOfLines={10}
+                placeholder='Descrição'
                 onChangeText={desc => setDesc(desc)}
             />
             <Button
@@ -66,5 +65,6 @@ const styles = StyleSheet.create({
         width: 300,
         height: 50,
         margin: 20,
+        padding: 10
     }
 })

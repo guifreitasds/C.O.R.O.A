@@ -1,14 +1,16 @@
 import { Text, View, ScrollView, TextInput, StyleSheet, Button } from 'react-native';
 import { useState } from 'react';
 
-export function EditScreen({ navigation, props }) {
+export function EditScreen({ navigation, props, route }) {
 
+
+    const data = route.params.data
     const [title, setTitle] = useState(data.title)
     const [description, setDesc] = useState(data.description)
-    const data = props.route.params.data
 
-    const updatetData = () => {
-        fetch("http://192.168.1.104:5000/update/${data.id}", {
+
+    const updateData = () => {
+        fetch(`http://192.168.1.104:5000/update/${data.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -17,7 +19,7 @@ export function EditScreen({ navigation, props }) {
         })
             .then(resp => resp.json())
             .then(data => {
-                props.navigation.navigate('Medicines', {data:data})
+                navigation.navigate('Medicines', {data:data})
             })
             .catch(error => console.log(error))
     }
@@ -31,7 +33,7 @@ export function EditScreen({ navigation, props }) {
                 mode="outlined"
                 onChangeText={text => setTitle(text)}
             />
-            <TextInput style={{ margin: 10 }}
+            <TextInput style={styles.inputTitle}
                 label="Descrição"
                 value={description}
                 mode="outlined"
@@ -43,7 +45,7 @@ export function EditScreen({ navigation, props }) {
                 style={{ margin: 10 }}
                 title='Editar'
                 mode='contained'
-                onPress={() => updatetData()}
+                onPress={() => updateData()}
             ></Button>
         </View>
     );

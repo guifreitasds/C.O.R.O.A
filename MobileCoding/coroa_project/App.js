@@ -58,10 +58,9 @@ export default function App() {
         <Stack.Screen name='Chat' component={TestScreen} />
         <Stack.Screen name='Login' component={LoginScreen} />
         <Stack.Screen name='About' component={AboutScreen} />
-        <Stack.Screen name='Remédio' component={CreateScreen} />
-        <Stack.Screen name='Medicines' component={MedicinesScreen} /><Stack.Screen name='Detalhes' component={DetailsScreen} />
+        <Stack.Screen name='Create' component={CreateScreen} />
         <Stack.Screen name='Editar' component={EditScreen} />
-        <Stack.Screen name='Detalhes' component={DetailsScreen} />
+        <Stack.Screen name='Details' component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

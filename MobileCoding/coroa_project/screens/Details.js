@@ -1,19 +1,19 @@
 import { Text, View, ScrollView, TextInput, StyleSheet, Button } from 'react-native';
 import { useState } from 'react';
 
-export function DetailsScreen({ navigation, props }) {
+export function DetailsScreen({ navigation, props, route }) {
 
-    const data = props.route.params.data;
+    const data = route.params.data;
 
     const deleteData = (data) => {
-        fetch("http://192.168.1.104:5000/delete/${data.id}", {
+        fetch(`http://192.168.1.104:5000/delete/${data.id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
             },
         })
         .then(data => {
-            props.navigation.navigate('Medicines')
+            navigation.navigate('Medicines')
         })
         .catch(error => console.log(error))
     }
@@ -27,7 +27,7 @@ export function DetailsScreen({ navigation, props }) {
 
                 <Text
                     style={{ fontSize: 20, marginTop: 10 }}>
-                    {data.description}
+                    Descrição: {data.description}
                 </Text>
             </View>
             <View style={styles.buttons}>
@@ -35,12 +35,12 @@ export function DetailsScreen({ navigation, props }) {
                     style={{ margin: 10 }}
                     title='Editar'
                     mode='contained'
-                    onPress={() => props.navigation.navigate("Editar")}
+                    onPress={() => navigation.navigate("Editar", {data: data})}
                 ></Button>
 
                 <Button
                     style={{ margin: 10 }}
-                    title='Exlcuir'
+                    title='Excluir'
                     mode='contained'
                     onPress={() => deleteData(data)}
                 ></Button>
@@ -62,6 +62,8 @@ const styles = StyleSheet.create({
 
     },
     Main: {
+        backgroundColor: "#ffffff",
+        borderRadius: 5,
         margin: 10,
         padding: 10
     },
@@ -69,6 +71,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-around",
         margin: 15,
-        padding: 10
+        padding: 10,
+        gap: 20
     },
 })
