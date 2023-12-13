@@ -10,7 +10,7 @@ export function EditScreen({ navigation, props, route }) {
 
 
     const updateData = () => {
-        fetch(`http://192.168.1.104:5000/update/${data.id}`, {
+        fetch(`http://0.0.0.0:5000/update/${data.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

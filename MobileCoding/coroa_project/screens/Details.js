@@ -6,7 +6,7 @@ export function DetailsScreen({ navigation, props, route }) {
     const data = route.params.data;
 
     const deleteData = (data) => {
-        fetch(`http://192.168.1.104:5000/delete/${data.id}`, {
+        fetch(`http://0.0.0.0:5000/delete/${data.id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

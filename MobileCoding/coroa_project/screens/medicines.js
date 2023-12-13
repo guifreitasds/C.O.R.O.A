@@ -16,7 +16,7 @@ export function MedicinesScreen({ route, navigation, props }) {
   const [loading, setLoading] = useState(true)
 
   const LoadData = () => {
-    fetch('http://192.168.1.104:5000/get', {
+    fetch('http://0.0.0.0:5000/get', {
       method: 'GET'
     })
       .then(resp => resp.json())
