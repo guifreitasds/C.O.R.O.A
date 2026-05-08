@@ -7,7 +7,7 @@ export function CreateScreen({ navigation, props }) {
     const [description, setDesc] = useState('')
 
     const insertData = () => {
-        fetch("http://192.168.31.198:5000/add", {
+        fetch("http://ip:5000/add", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
